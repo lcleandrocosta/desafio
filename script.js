@@ -19,10 +19,14 @@ const statusDireita = document.querySelector('#status-direita');
 //Declaração da variável do Botão
 const botao = document.querySelector('button');
 
-//Método para recuperar dados dos personagens da coluna da esquerda
+//Método para gerar valor aleatório para a coluna da equerda
+gerarValorAleatorioEsquerda  = () => {
+    return Math.floor(Math.random() * 671);
+}
 
+//Método para recuperar dados dos personagens da coluna da esquerda
 pegarPersonagemEsquerda = () => {
-    let numeroAleatorio = gerarValorAleatorio1();
+    let numeroAleatorio = gerarValorAleatorioEsquerda();
     return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
         method:'GET',
         headers: {
