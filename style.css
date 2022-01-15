@@ -49,3 +49,10 @@ main > section button {
     float: left;
     width: 33.33%;
 }
+
+#linha::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
