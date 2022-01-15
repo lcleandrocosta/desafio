@@ -56,3 +56,8 @@ main > section button {
     display: table;
 }
 
+#detalhes-container {
+    font-weight: bold;
+    list-style-type: none;
+    width: 90%;
+}
