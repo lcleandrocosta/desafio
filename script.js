@@ -70,7 +70,7 @@ gerarValorAleatorioDireita  = () => {
     return Math.floor(Math.random() * 671);
 }
 
-//Função para gerar valor aleatório para a coluna da direita
+//Função para recuperar dados dos personagens da coluna da direita
 pegarPersonagemDireita = () => {
     let numeroAleatorio = gerarValorAleatorioDireita();
     return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
@@ -86,7 +86,12 @@ pegarPersonagemDireita = () => {
         especieDireita.innerHTML = data.species;
         statusDireita.innerHTML = data.status;
     });
+}    
+
+//Função chama as funções de recuperação de dados dos personagens em cada coluna
+function exibirNaTela(){
+    botao.onclick = pegarPersonagemEsquerda();  
+    botao.onclick = pegarPersonagemCentral();
+    botao.onclick = pegarPersonagemDireita();
+    return;
 }
-
-
-
