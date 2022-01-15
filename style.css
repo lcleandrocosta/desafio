@@ -62,3 +62,6 @@ main > section button {
     width: 90%;
 }
 
+#detalhes-container > li p {
+    color: white;
+}
