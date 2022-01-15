@@ -41,3 +41,9 @@ pegarPersonagemEsquerda = () => {
         statusEsquerda.innerHTML = data.status;
     });
 }
+
+//Método para gerar valor aleatório para a coluna central
+gerarValorAleatorioCentral  = () => {
+    return Math.floor(Math.random() * 671);
+}
+
