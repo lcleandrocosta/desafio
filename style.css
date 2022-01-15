@@ -44,3 +44,8 @@ main > section button {
     padding: 9px 23px;
     text-transform: uppercase;
 }
+
+#coluna {
+    float: left;
+    width: 33.33%;
+}
