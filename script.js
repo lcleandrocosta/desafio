@@ -95,3 +95,6 @@ function exibirNaTela(){
     botao.onclick = pegarPersonagemDireita();
     return;
 }
+
+//Botão executa as funções de recuperaçãode dados dos persobagens ao ser clicado
+botao.addEventListener('click', exibirNaTela);
