@@ -24,7 +24,7 @@ gerarValorAleatorioEsquerda  = () => {
     return Math.floor(Math.random() * 671);
 }
 
-//Método para recuperar dados dos personagens da coluna da esquerda
+//Função para recuperar dados dos personagens da coluna da esquerda
 pegarPersonagemEsquerda = () => {
     let numeroAleatorio = gerarValorAleatorioEsquerda();
     return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
@@ -42,8 +42,31 @@ pegarPersonagemEsquerda = () => {
     });
 }
 
-//Método para gerar valor aleatório para a coluna central
+//Função para gerar valor aleatório para a coluna central
 gerarValorAleatorioCentral  = () => {
+    return Math.floor(Math.random() * 671);
+}
+
+//Função para recuperar dados dos personagens da coluna central
+pegarPersonagemCentral = () => {
+    let numeroAleatorio = gerarValorAleatorioCentral();
+    return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
+        method:'GET',
+        headers: {
+            Accept: 'application/json', 
+            "Content-type": 'application/json'
+        }
+    }).then((response) => response.json()).then((data) => {
+        imagemCentral.src = data.image;
+        imagemCentral.alt = data.name;
+        nomeDoPersonagemCentral.innerHTML = data.name;
+        especieCentral.innerHTML = data.species;
+        statusCentral.innerHTML = data.status;
+    });
+}
+
+//Função para gerar valor aleatório para a coluna direita
+gerarValorAleatorioDireita  = () => {
     return Math.floor(Math.random() * 671);
 }
 
