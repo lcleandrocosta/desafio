@@ -70,3 +70,23 @@ gerarValorAleatorioDireita  = () => {
     return Math.floor(Math.random() * 671);
 }
 
+//Função para gerar valor aleatório para a coluna da direita
+pegarPersonagemDireita = () => {
+    let numeroAleatorio = gerarValorAleatorioDireita();
+    return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
+        method:'GET',
+        headers: {
+            Accept: 'application/json', 
+            "Content-type": 'application/json'
+        }
+    }).then((response) => response.json()).then((data) => {
+        imagemDireita.src = data.image;
+        imagemDireita.alt = data.name;
+        nomeDoPersonagemDireita.innerHTML = data.name;
+        especieDireita.innerHTML = data.species;
+        statusDireita.innerHTML = data.status;
+    });
+}
+
+
+
