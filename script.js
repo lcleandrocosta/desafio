@@ -18,3 +18,22 @@ const statusDireita = document.querySelector('#status-direita');
 
 //Declaração da variável do Botão
 const botao = document.querySelector('button');
+
+//Método para recuperar dados dos personagens da coluna da esquerda
+
+pegarPersonagemEsquerda = () => {
+    let numeroAleatorio = gerarValorAleatorio1();
+    return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
+        method:'GET',
+        headers: {
+            Accept: 'application/json', 
+            "Content-type": 'application/json'
+        }
+    }).then((response) => response.json()).then((data) => {
+        imagemEsquerda.src = data.image;
+        imagemEsquerda.alt = data.name;
+        nomeDoPersonagemEsquerda.innerHTML = data.name;
+        especieEsquerda.innerHTML = data.species;
+        statusEsquerda.innerHTML = data.status;
+    });
+}
