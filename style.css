@@ -72,4 +72,5 @@ main > section button {
 
 #detalhes-container > li p {
     color: yellow;
+    margin-left: 5px;
 }
