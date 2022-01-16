@@ -49,6 +49,10 @@ main > section button {
     transition: all 0.5s linear;
 }
 
+button:hover {
+    background-color: gray;
+}
+
 #coluna {
     float: left;
     width: 33.33%;
