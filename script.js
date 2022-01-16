@@ -96,5 +96,5 @@ function exibirNaTela(){
     return;
 }
 
-//Botão executa as funções de recuperaçãode dados dos persobagens ao ser clicado
+//Botão executa as funções de recuperação de dados dos personagens ao ser clicado
 botao.addEventListener('click', exibirNaTela);
