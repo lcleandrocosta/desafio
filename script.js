@@ -19,7 +19,7 @@ const statusDireita = document.querySelector('#status-direita');
 //Declaração da variável do Botão
 const botao = document.querySelector('button');
 
-//Método para gerar valor aleatório para a coluna da equerda
+//Função para gerar valor aleatório para a coluna da equerda
 gerarValorAleatorioEsquerda  = () => {
     return Math.floor(Math.random() * 671);
 }
@@ -88,7 +88,7 @@ pegarPersonagemDireita = () => {
     });
 }    
 
-//Função chama as funções de recuperação de dados dos personagens em cada coluna
+//Função para chamar as funções de recuperação de dados dos personagens em cada coluna
 function exibirNaTela(){
     botao.onclick = pegarPersonagemEsquerda();  
     botao.onclick = pegarPersonagemCentral();

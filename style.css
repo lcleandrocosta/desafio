@@ -46,6 +46,7 @@ main > section button {
     line-height: 15px;
     padding: 9px 23px;
     text-transform: uppercase;
+    transition: all 0.5s linear;
 }
 
 #coluna {
