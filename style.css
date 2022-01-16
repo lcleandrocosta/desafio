@@ -17,7 +17,7 @@ main {
     position: relative;
 }
 
-main > section{
+main > section {
     text-align: center;
 }
 
@@ -64,7 +64,7 @@ button:hover {
     display: table;
 }
 
-#detalhes-container{
+#detalhes-container {
     font-weight: bold;
     list-style-type: none;
     width: 90%;
