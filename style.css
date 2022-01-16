@@ -28,12 +28,6 @@ main > section  img {
     width: 300px;
 }
 
-main > section  img {
-    height: 300px;
-    margin: 15px 0;
-    width: 300px;
-}
-
 main > section button {
     background-color: #0000CD;
     border: none;
