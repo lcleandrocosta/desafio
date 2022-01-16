@@ -66,6 +66,7 @@ main > section button {
 
 #detalhes-container > li {
     align-items: baseline;
+    color: white;
     display: flex;
 }
 
